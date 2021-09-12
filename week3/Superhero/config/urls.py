@@ -1,9 +1,8 @@
-
-from django.contrib import admin
 from django.urls import path
-from django.views.generic import AntView, SpiderView, ThorView
+from hero.views import AntView, SpiderView, ThorView, IndexView
 
 urlpatterns = [
+    path('', IndexView.as_view()),
     path('ant-man', AntView.as_view()),
     path('spider-man', SpiderView.as_view()),
     path('thor', ThorView.as_view()),

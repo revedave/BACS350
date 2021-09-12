@@ -1,5 +1,4 @@
-from django.views.generic import TemplateView
-
+from django.views.generic.base import TemplateView
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -34,5 +33,5 @@ class ThorView(TemplateView):
         return {
             'title': 'Thor',
             'body': 'By Odins beard, you shall not cut my hair, lest you feel the wrath of the mighty Thor! Please! Please kind sir, do not cut my hair! No! Nooo!',
-            'image': '/static/images/black_widow.jpg'
+            'image': '/static/images/thor.jpg'
         }
