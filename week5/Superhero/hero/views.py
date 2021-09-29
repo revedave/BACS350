@@ -7,7 +7,7 @@ from django.views.generic.list import ListView
 from .models import Superhero
 
 
-class HeroView(ListView):
+class HeroListView(ListView):
     template_name = 'hero_list.html'
     model = Superhero
 
