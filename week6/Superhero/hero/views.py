@@ -20,15 +20,15 @@ class HeroDetailView(DetailView):
 class HeroCreateView(CreateView):
     template_name = "hero_add.html"
     model = Superhero
-    fields = ['name', 'identity', 'description']
+    fields = ['name', 'identity', 'description', 'strength', 'weakness']
 
 class HeroUpdateView(UpdateView):
     template_name = "hero_edit.html"
     model = Superhero
-    fields = ['name', 'identity', 'description']
+    fields = ['name', 'identity', 'description', 'strength', 'weakness']
 
 
 class HeroDeleteView(DeleteView):
     tempplate_name = 'hero_delete.html'
     model = Superhero
-    fields = ['name', 'identity', 'description']
+    fields = ['name', 'identity', 'description', 'strength', 'weakness']
