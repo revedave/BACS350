@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls.base import reverse_lazy
 
 class Superhero(models.Model):
     name = models.CharField(max_length=20)
@@ -9,3 +10,5 @@ class Superhero(models.Model):
     def __str__(self):
         return f'{self.name} {self.identity} {self.description}'
 
+    def get_absolute_url(self):
+        return reverse_lazy('book_detail', args=[str(self.id)])
