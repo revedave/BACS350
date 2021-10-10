@@ -3,17 +3,18 @@
 {% block content %}
 <body>
 
-<div class="container bg-light text-dark p-3">
-    <table class="table table-hover">
+<div class="container bg-dark text-light p-3">
+    <table class="table table-hover" style="background-color: darkgreen;">
         <tr>
             <th>Hero</th>
             <th>identity</th>
             <th>Edit</th>
+            <th>Delete</th>
         </tr>
-        {% for book in object_list %}
+        {% for hero in object_list %}
         <tr>
-            <td><a href="{{ hero.pk }}">{{ hero.name }}</a></td>
-            <td>{{ hero.identity }}</td>
+            <td><a href="{{ hero.pk }}" style="color:black;">{{ hero.name }}</a></td>
+            <td>{{ hero.identity}}</td>
             <td><a href="{{ hero.pk }}/edit">Edit</a></td>
             <td><a href="{{ hero.pk }}/delete">Delete</a></td>
         </tr>
