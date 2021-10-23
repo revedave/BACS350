@@ -4,7 +4,7 @@ from django.urls.base import reverse_lazy
 class Superhero(models.Model):
     name = models.CharField(max_length=100)
     identity = models.CharField(max_length=100)
-    description = models.CharField()
+    description = models.CharField(max_length=500)
     strength = models.CharField(max_length= 200, editable= True)
     weakness = models.CharField(max_length=200, editable= True)
     hero = models.CharField(max_length=200, editable=True)  
