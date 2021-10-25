@@ -1,15 +1,23 @@
-{% extends 'hero_theme.html' %}
+{% extends 'theme.html' %}
+
+
+
+{% load crispy_forms_tags %}
+
+
 
 {% block content %}
+<div class="container mt-5">
 
-<h1>Add New Hero</h1>
 
-<form action="" method="post">{% csrf_token %}
-    
-        {{ form.as_p}}
-   
-    <button class="btn btn-success mt-5" type="submit">Add Record</button>
-</form>
+    <h1>Add Hero</h1>
+
+    <form action="" method="post">{% csrf_token %}
+
+        {{ form|crispy }}
+
+        <button class="btn btn-success mt-5" type="submit">Add Record</button>
+    </form>
 </div>
 
 {% endblock content %}
