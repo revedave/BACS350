@@ -1,0 +1,21 @@
+{% extends 'hero_theme.html' %}
+
+{% block content %}
+{% load static %}
+<body>
+<h1>Hero Details</h1>
+<ul>
+    <li>Name: {{ object.name }}</li>
+    <li>Description: {{ object.description }}</li>
+    <li>Strength: {{ object.strength }}</li>
+    <li>Weakness: {{object.weakness}} </li>
+    <div class="container">
+        <img src="{{ object.hero }}" alt="{{ object.name }}" width="300">
+    </div>
+    <div class="container">
+        <a href="/" class="btn btn-success m-5">Show all Heroes</a>
+    </div>
+    
+</ul>
+</body>
+{% endblock content %}
